@@ -1,12 +1,6 @@
 import pandas as pd
 import streamlit as st
 
-# injecte du HTML pour recharger la page toutes les 30 secondes
-st.markdown(
-    '<meta http-equiv="refresh" content="30">',
-    unsafe_allow_html=True
-)
-
 st.set_page_config(page_title="Vidéoclub", page_icon="🎬")
 
 # 🔗 Lien vers ton Google Sheets publié en CSV
@@ -95,5 +89,6 @@ st.subheader("🎥 Films trouvés :")
 st.dataframe(resultats)
 
 st.caption("Les données proviennent directement de ton Google Sheets publié en CSV.")
+
 
 
