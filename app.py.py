@@ -95,4 +95,3 @@ st.subheader("🎥 Films trouvés :")
 st.dataframe(resultats)
 
 st.caption("Les données proviennent directement de ton Google Sheets publié en CSV.")
-=
