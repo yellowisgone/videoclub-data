@@ -4,7 +4,7 @@ import pandas as pd
 st.set_page_config(page_title="🎬 Base de données des films", layout="wide")
 
 # 🔗 URL vers ton Google Sheet (version CSV publique)
-sheet_url = "https://docs.google.com/spreadsheets/d/TON_ID/export?format=csv"
+sheet_url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSrBDxMN6CGh5ROmH0pXnJzbA76EqPulrda5W_WFFkKCL8ct13dSAoHpvZTtrV-2LrOhD_-ehm5XeWW/pub?output=csv"
 
 # ⬇️ Fonction pour charger les données
 @st.cache_data
@@ -71,3 +71,4 @@ if selected_director != "Tous":
 # 📊 Affichage
 st.dataframe(filtered, use_container_width=True)
 st.write(f"🎯 {len(filtered)} film(s) trouvé(s)")
+
