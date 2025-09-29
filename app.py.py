@@ -60,7 +60,9 @@ resultats = films.copy()
 
 # Filtre par genre
 if choix_genres:
-    mask_genre = resultats['Genre'].apply(lambda g: any(genre.strip() in str(g) for genre in choix_genres))
+    mask_genre = resultats['Genre'].apply(
+        lambda g: all(genre.strip() in str(g) for genre in choix_genres)
+    )
     resultats = resultats[mask_genre]
 
 # Filtre par titre (texte partiel)
@@ -95,3 +97,4 @@ st.subheader("🎥 Films trouvés :")
 st.dataframe(resultats)
 
 st.caption("Les données proviennent directement de ton Google Sheets publié en CSV.")
+
